@@ -1,0 +1,220 @@
+[
+  // Code Formatting - Cmd+Option+L
+  {
+    "key": "cmd+alt+l",
+    "command": "editor.action.formatDocument",
+    "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "cmd+alt+l",
+    "command": "editor.action.formatSelection",
+    "when": "editorHasDocumentSelectionFormattingProvider && editorTextFocus && !editorReadonly && editorHasSelection"
+  },
+  
+  // Optimize Imports - Cmd+Option+O
+  // First remove all conflicting default bindings for this key
+  {
+    "key": "cmd+alt+o",
+    "command": "-workbench.action.openRecent"
+  },
+  {
+    "key": "cmd+alt+o",
+    "command": "-workbench.action.remote.showMenu"
+  },
+  {
+    "key": "cmd+alt+o",
+    "command": "-editor.action.toggleColumnSelection"
+  },
+  {
+    "key": "cmd+alt+o",
+    "command": "editor.action.organizeImports",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+
+    {
+    "key": "cmd+alt+shift+o",
+    "command": "editor.action.sourceAction",
+    "args": {
+      "kind": "source.organizeImports",
+      "apply": "first"
+    },
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  
+  
+  // Go to Line - Cmd+L (need to remove default keybinding first)
+  {
+    "key": "cmd+l",
+    "command": "-expandLineSelection",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "cmd+l",
+    "command": "workbench.action.gotoLine"
+  },
+  
+  // Search Entire Directory - Cmd+Shift+F
+  {
+    "key": "cmd+shift+f",
+    "command": "workbench.action.findInFiles"
+  },
+  
+  // Run Python Code - Ctrl+R
+  {
+    "key": "ctrl+r",
+    "command": "python.execInTerminal",
+    "when": "editorTextFocus && editorLangId == 'python'"
+  },
+  
+  // Run Debug Mode - Ctrl+D (need to remove default keybinding first)
+  {
+    "key": "ctrl+d",
+    "command": "-editor.action.addSelectionToNextFindMatch",
+    "when": "editorFocus"
+  },
+  {
+    "key": "ctrl+d",
+    "command": "workbench.action.debug.start",
+    "when": "debuggersAvailable && debugState == 'inactive'"
+  },
+  {
+    "key": "ctrl+d",
+    "command": "workbench.action.debug.continue",
+    "when": "debugState == 'stopped'"
+  },
+  
+  // Cycle Through Files - Ctrl+Tab (forward) and Ctrl+Shift+Tab (backward)
+  {
+    "key": "ctrl+tab",
+    "command": "workbench.action.nextEditorInGroup"
+  },
+  {
+    "key": "ctrl+shift+tab",
+    "command": "workbench.action.previousEditorInGroup"
+  },
+  
+  // Close Current Window - Cmd+W
+  {
+    "key": "cmd+w",
+    "command": "workbench.action.closeActiveEditor"
+  },
+  
+  // Go to Definition - Cmd+B
+  {
+    "key": "cmd+b",
+    "command": "editor.action.revealDefinition",
+    "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
+  },
+  {
+    "key": "cmd+b",
+    "command": "-workbench.action.toggleSidebarVisibility"
+  },
+  
+  // Duplicate Line - Cmd+D (need to remove default keybinding first)
+  {
+    "key": "cmd+d",
+    "command": "-editor.action.addSelectionToNextFindMatch",
+    "when": "editorFocus"
+  },
+  {
+    "key": "cmd+d",
+    "command": "editor.action.copyLinesDownAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  
+  // Parameter Hints - Cmd+P (show function parameters)
+  {
+    "key": "cmd+p",
+    "command": "-workbench.action.quickOpen"
+  },
+  {
+    "key": "cmd+p",
+    "command": "editor.action.triggerParameterHints",
+    "when": "editorHasSignatureHelpProvider && editorTextFocus"
+  },
+  
+  // Move Quick Open to Cmd+E (alternative since we're using Cmd+P for parameter hints)
+  {
+    "key": "cmd+e",
+    "command": "workbench.action.quickOpen"
+  },
+  {
+    "key": "cmd+e",
+    "command": "workbench.action.quickOpenNavigateNextInFilePicker",
+    "when": "inFilesPicker && inQuickOpen"
+  },
+  {
+    "key": "cmd+p",
+    "command": "-workbench.action.quickOpenNavigateNextInFilePicker",
+    "when": "inFilesPicker && inQuickOpen"
+  },
+
+  {
+    "key": "cmd+alt+shift+x",
+    "command": "workbench.action.tasks.runTask",
+    "args": "Rsync to Server"
+  },
+  
+  {
+    "key": "cmd+alt+shift+s",
+    "command": "workbench.action.tasks.runTask",
+    "args": "Rsync Current File to Server",
+    "when": "explorerViewletVisible && filesExplorerFocus"
+  }
+   {
+    "key": "ctrl+tab",
+    "command": "workbench.action.previousEditorInGroup"
+  },
+  {
+    "key": "ctrl+shift+tab",
+    "command": "workbench.action.nextEditorInGroup"
+  },
+
+    
+  // Cmd+1: Cycle through editor panes (split views)
+  {
+    "key": "cmd+1",
+    "command": "workbench.action.focusNextGroup",
+    "when": "editorFocus"
+  },
+
+    // Cmd+Shift+1: Cycle through editor panes (split views) backward
+  {
+    "key": "cmd+shift+1",
+    "command": "workbench.action.focusPreviousGroup",
+    "when": "editorFocus"
+  },
+  
+  // Cmd+2: Toggle Terminal
+  {
+    "key": "cmd+2",
+    "command": "workbench.action.terminal.toggleTerminal"
+  },
+  
+  // Cmd+3: Toggle Explorer (Project Explorer)
+  {
+    "key": "cmd+3",
+    "command": "workbench.view.explorer"
+  },
+    // Option+Enter: Show Quick Fix / Code Actions (import suggestions, etc.)
+  {
+    "key": "alt+enter",
+    "command": "editor.action.quickFix",
+    "when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly"
+  }
+
+  // Shift+Tab: Go to previously accessed file (navigation history back)
+  {
+    "key": "shift+tab",
+    "command": "workbench.action.navigateBack",
+    "when": "editorFocus"
+  },
+  
+  // Tab: Go forward in navigation history
+  {
+    "key": "tab",
+    "command": "workbench.action.navigateForward",
+    "when": "editorFocus && !editorTabMovesFocus && !inSnippetMode && !suggestWidgetVisible"
+  }
+  
+]
