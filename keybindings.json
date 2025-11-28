@@ -31,15 +31,15 @@
     "when": "editorTextFocus && !editorReadonly"
   },
 
-    {
-    "key": "cmd+alt+shift+o",
-    "command": "editor.action.sourceAction",
-    "args": {
-      "kind": "source.organizeImports",
-      "apply": "first"
-    },
-    "when": "editorTextFocus && !editorReadonly"
-  },
+  //   {
+  //   "key": "cmd+alt+shift+o",
+  //   "command": "editor.action.sourceAction",
+  //   "args": {
+  //     "kind": "source.organizeImports",
+  //     "apply": "first"
+  //   },
+  //   "when": "editorTextFocus && !editorReadonly"
+  // },
   
   
   // Go to Line - Cmd+L (need to remove default keybinding first)
@@ -84,14 +84,14 @@
   },
   
   // Cycle Through Files - Ctrl+Tab (forward) and Ctrl+Shift+Tab (backward)
-  {
-    "key": "ctrl+tab",
-    "command": "workbench.action.nextEditorInGroup"
-  },
-  {
-    "key": "ctrl+shift+tab",
-    "command": "workbench.action.previousEditorInGroup"
-  },
+  // {
+  //   "key": "ctrl+tab",
+  //   "command": "workbench.action.nextEditorInGroup"
+  // },
+  // {
+  //   "key": "ctrl+shift+tab",
+  //   "command": "workbench.action.previousEditorInGroup"
+  // },
   
   // Close Current Window - Cmd+W
   {
@@ -161,14 +161,14 @@
     "args": "Rsync Current File to Server",
     "when": "explorerViewletVisible && filesExplorerFocus"
   }
-   {
-    "key": "ctrl+tab",
-    "command": "workbench.action.previousEditorInGroup"
-  },
-  {
-    "key": "ctrl+shift+tab",
-    "command": "workbench.action.nextEditorInGroup"
-  },
+  //  {
+  //   "key": "ctrl+tab",
+  //   "command": "workbench.action.previousEditorInGroup"
+  // },
+  // {
+  //   "key": "ctrl+shift+tab",
+  //   "command": "workbench.action.nextEditorInGroup"
+  // },
 
     
   // Cmd+1: Cycle through editor panes (split views)
@@ -205,16 +205,10 @@
 
   // Shift+Tab: Go to previously accessed file (navigation history back)
   {
-    "key": "shift+tab",
+    "key": "ctrl+tab",
     "command": "workbench.action.navigateBack",
     "when": "editorFocus"
   },
-  
-  // Tab: Go forward in navigation history
-  {
-    "key": "tab",
-    "command": "workbench.action.navigateForward",
-    "when": "editorFocus && !editorTabMovesFocus && !inSnippetMode && !suggestWidgetVisible"
-  }
+
   
 ]
