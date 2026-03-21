@@ -2,5 +2,21 @@
     "python.defaultInterpreterPath": "/Users/chaddy/anaconda3",
     "terminal.integrated.inheritEnv": false,
     "github.copilot.nextEditSuggestions.enabled": false,
-    "security.workspace.trust.untrustedFiles": "open"
+    "security.workspace.trust.untrustedFiles": "open",
+    "claudeCode.preferredLocation": "panel",
+    "http.systemCertificatesNode": true,
+    "geminicodeassist.project": "golden-reflector-v3q1m",
+    "geminicodeassist.displayInlineContextHint": false,
+    "[python]": {
+        "editor.defaultFormatter": "charliermarsh.ruff"
+    },
+    "editor.insertSpaces": true,
+	"editor.tabSize": 4,
+	"editor.detectIndentation": false,
+    "autopep8.args": [
+        "--ignore=W191,E101"
+    ],
+    "codeium.enableConfig": {
+        "*": false
+    }
 }
