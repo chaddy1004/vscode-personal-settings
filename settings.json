@@ -1,5 +1,4 @@
 {
-    "python.defaultInterpreterPath": "/Users/chaddy/anaconda3",
     "terminal.integrated.inheritEnv": false,
     "github.copilot.nextEditSuggestions.enabled": false,
     "security.workspace.trust.untrustedFiles": "open",

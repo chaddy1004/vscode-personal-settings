@@ -1,0 +1,155 @@
+[
+  // Code Formatting - Alt+Meta+L  (was Cmd+Option+L)
+  {
+    "key": "alt+meta+l",
+    "command": "editor.action.formatDocument",
+    "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "alt+meta+l",
+    "command": "editor.action.formatSelection",
+    "when": "editorHasDocumentSelectionFormattingProvider && editorTextFocus && !editorReadonly && editorHasSelection"
+  },
+  // Optimize Imports - Alt+Meta+O  (was Cmd+Option+O)
+  {
+    "key": "alt+meta+o",
+    "command": "-workbench.action.openRecent"
+  },
+  {
+    "key": "alt+meta+o",
+    "command": "-workbench.action.remote.showMenu"
+  },
+  {
+    "key": "alt+meta+o",
+    "command": "-editor.action.toggleColumnSelection"
+  },
+  {
+    "key": "alt+meta+o",
+    "command": "editor.action.organizeImports",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  // Go to Line - Alt+L  (was Cmd+L)
+  {
+    "key": "alt+l",
+    "command": "-expandLineSelection",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "alt+l",
+    "command": "workbench.action.gotoLine"
+  },
+  // Search Entire Directory - Alt+Shift+F  (was Cmd+Shift+F)
+  {
+    "key": "alt+shift+f",
+    "command": "workbench.action.findInFiles"
+  },
+  // Run Python Code - Ctrl+R  (unchanged)
+  {
+    "key": "ctrl+r",
+    "command": "python.execInTerminal",
+    "when": "editorTextFocus && editorLangId == 'python'"
+  },
+  // Run Debug Mode - Ctrl+D  (unchanged)
+  {
+    "key": "ctrl+d",
+    "command": "-editor.action.addSelectionToNextFindMatch",
+    "when": "editorFocus"
+  },
+  {
+    "key": "ctrl+d",
+    "command": "workbench.action.debug.start",
+    "when": "debuggersAvailable && debugState == 'inactive'"
+  },
+  {
+    "key": "ctrl+d",
+    "command": "workbench.action.debug.continue",
+    "when": "debugState == 'stopped'"
+  },
+  // Close Current Editor - Alt+W  (was Cmd+W)
+  {
+    "key": "alt+w",
+    "command": "workbench.action.closeActiveEditor"
+  },
+  // Go to Definition - Alt+B  (was Cmd+B)
+  {
+    "key": "alt+b",
+    "command": "editor.action.revealDefinition",
+    "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
+  },
+  {
+    "key": "alt+b",
+    "command": "-workbench.action.toggleSidebarVisibility"
+  },
+  // Duplicate Line - Alt+D  (was Cmd+D)
+  {
+    "key": "alt+d",
+    "command": "-editor.action.addSelectionToNextFindMatch",
+    "when": "editorFocus"
+  },
+  {
+    "key": "alt+d",
+    "command": "editor.action.copyLinesDownAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  // Parameter Hints - Alt+P  (was Cmd+P)
+  {
+    "key": "alt+p",
+    "command": "editor.action.triggerParameterHints",
+    "when": "editorHasSignatureHelpProvider && editorTextFocus"
+  },
+  // Move Quick Open to Alt+E  (was Cmd+E)
+  {
+    "key": "alt+e",
+    "command": "workbench.action.quickOpen"
+  },
+  {
+    "key": "alt+e",
+    "command": "workbench.action.quickOpenNavigateNextInFilePicker",
+    "when": "inFilesPicker && inQuickOpen"
+  },
+  {
+    "key": "alt+meta+shift+x",
+    "command": "workbench.action.tasks.runTask",
+    "args": "Rsync to Server"
+  },
+  {
+    "key": "alt+meta+shift+s",
+    "command": "workbench.action.tasks.runTask",
+    "args": "Rsync Current File to Server",
+    "when": "explorerViewletVisible && filesExplorerFocus"
+  },
+  // Alt+1: Cycle through editor panes forward  (was Cmd+1)
+  {
+    "key": "alt+1",
+    "command": "workbench.action.focusNextGroup",
+    "when": "editorFocus"
+  },
+  // Alt+Shift+1: Cycle through editor panes backward  (was Cmd+Shift+1)
+  {
+    "key": "alt+shift+1",
+    "command": "workbench.action.focusPreviousGroup",
+    "when": "editorFocus"
+  },
+  // Alt+2: Toggle Terminal  (was Cmd+2)
+  {
+    "key": "alt+2",
+    "command": "workbench.action.terminal.toggleTerminal"
+  },
+  // Alt+3: Toggle Explorer  (was Cmd+3)
+  {
+    "key": "alt+3",
+    "command": "workbench.view.explorer"
+  },
+  // Meta+Enter: Show Quick Fix / Code Actions  (was Option+Enter)
+  {
+    "key": "meta+enter",
+    "command": "editor.action.quickFix",
+    "when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly"
+  },
+  // Ctrl+Tab: Navigation history back  (unchanged)
+  {
+    "key": "ctrl+tab",
+    "command": "workbench.action.navigateBack",
+    "when": "editorFocus"
+  }
+]
